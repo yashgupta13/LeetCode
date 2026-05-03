@@ -1,0 +1,14 @@
+#include <math.h>
+int reverseBits(int n) {
+    int ans=0;
+    int power=31;
+    while(n>0)
+    {
+        int rem=n%2;
+        int tempPow=(int)(pow((double)2,(double)power));
+        ans=ans+(rem*tempPow);
+        power--;
+        n/=2;
+    }
+    return ans;
+}

@@ -1,0 +1,21 @@
+int smallestRepunitDivByK(int k) {
+    int r = 0;
+
+    // Track visited remainders
+    int visited[100000] = {0};
+    int count=0;
+    for (;;) {
+        r = (r * 10 + 1) % k;
+
+        // If remainder becomes 0 → found repunit divisible by k
+        if (r == 0)
+            return count+1;
+
+        // If this remainder repeats → loop → no repunit divides k
+        if (visited[r])
+            return -1;
+
+        visited[r] = 1;
+        count++;
+    }
+}

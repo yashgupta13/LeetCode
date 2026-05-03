@@ -1,6 +1,6 @@
 # LeetCode Solutions
 
-A structured collection of my LeetCode solutions in Java, organized by difficulty.
+A structured collection of my LeetCode solutions, organized by difficulty.
 
 ---
 
